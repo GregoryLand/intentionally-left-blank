@@ -6,11 +6,14 @@ from typing import Final
 
 DEFAULT_TOOL_TIP_TEXT: Final[str] = "Intentionally Left Blank"
 DEFAULT_APP_NAME: Final[str] = "intentionally-left-blank"
+#DEFAULT_APP_ORGANIZATION : Final[str] = "None"
 DEFAULT_OPACITY: Final[float] = 0.5
 
 def main() -> int:
     app = QtWidgets.QApplication(sys.argv)
+#    app.setOrganizationName(DEFAULT_APP_ORGANIZATION)
     app.setApplicationName(DEFAULT_APP_NAME)
+    app.setDesktopFileName(DEFAULT_APP_NAME)
     app.setPalette(QtGui.QColor.fromRgb(0,0,0))
 
     mainWindow = QtWidgets.QMainWindow()
